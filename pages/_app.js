@@ -7,6 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingBar from 'react-top-loading-bar';
 import '../styles/reset.css';
+import { initializeWallet } from "../contracts/fucntion"
+
 
 
 
@@ -124,6 +126,7 @@ export default function App({ Component, pageProps }) {
     newCart[itemCode]= {qty:1,price,name,size,variant,seller,img}
     setCart(newCart)
     saveCart(newCart)
+     initializeWallet() ;
     router.push('/checkout')
 
   }
